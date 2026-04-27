@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartNesia - Layanan Cerdas Indonesia</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LANDING PAGE ================= -->
+    <div id="landing-page" class="view active">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <span class="material-icons-outlined text-primary">cloud_done</span>
+                    <span class="logo-text">SmartNesia</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#hero">Beranda</a>
+                    <a href="#features">Fitur</a>
+                    <a href="#about">Tentang</a>
+                </div>
+                <button class="primary-btn login-trigger-btn">Login / Daftar</button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Akses Layanan Publik & Wisata Indonesia dalam <span class="text-primary">Satu Pintu</span></h1>
+                    <p>SmartNesia hadir untuk mempermudah hidup Anda. Urus E-KTP, lapor pajak, hingga pesan tiket wisata
+                        alam Indonesia dengan cepat, aman, dan didukung oleh AI cerdas.</p>
+                    <div class="hero-buttons">
+                        <button class="primary-btn btn-large login-trigger-btn">Mulai Sekarang</button>
+                        <button class="secondary-btn btn-large"
+                            onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">Pelajari
+                            Fitur</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for Hero Image (using CSS gradient/shapes in style) -->
+                    <div class="hero-graphics">
+                        <div class="glass-card card-1">
+                            <span class="material-icons-outlined text-primary">description</span>
+                            <div>
+                                <h4>E-KTP Selesai</h4>
+                                <small>Baru saja</small>
+                            </div>
+                        </div>
+                        <div class="glass-card card-2">
+                            <span class="material-icons-outlined" style="color: #4CAF50;">landscape</span>
+                            <div>
+                                <h4>Tiket Bromo</h4>
+                                <small>Berhasil dipesan</small>
+                            </div>
+                        </div>
+                        <div class="glass-card card-3">
+                            <span class="material-icons-outlined" style="color: #FF9800;">smart_toy</span>
+                            <div>
+                                <h4>AI Assistant</h4>
+                                <small>Siap membantu</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Fitur Unggulan</h2>
+                    <p>Semua yang Anda butuhkan untuk layanan publik digital yang efisien.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background-color: rgba(33, 150, 243, 0.1); color: #2196F3;">
+                            <span class="material-icons-outlined">account_balance</span>
+                        </div>
+                        <h3>Layanan Publik</h3>
+                        <p>Urus administrasi kependudukan, pajak, dan perizinan tanpa antre ke kantor dinas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background-color: rgba(76, 175, 80, 0.1); color: #4CAF50;">
+                            <span class="material-icons-outlined">landscape</span>
+                        </div>
+                        <h3>E-Tiket Wisata</h3>
+                        <p>Jelajahi keindahan Indonesia. Pesan tiket wisata, taman nasional, dan event kebudayaan.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background-color: rgba(255, 152, 0, 0.1); color: #FF9800;">
+                            <span class="material-icons-outlined">smart_toy</span>
+                        </div>
+                        <h3>Asisten AI 24/7</h3>
+                        <p>Tanya apa saja seputar layanan dan panduan wisata, asisten cerdas kami siap menjawab.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="material-icons-outlined" style="color: white;">cloud_done</span>
+                        <span class="logo-text" style="color: white;">SmartNesia</span>
+                    </div>
+                    <p>Membawa Indonesia menuju era digital yang inklusif dan efisien.</p>
+                </div>
+                <div class="footer-links">
+                    <p>&copy; 2026 SmartNesia. Hak Cipta Dilindungi.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content login-box">
+            <button class="close-btn" id="close-login">&times;</button>
+            <div class="login-header">
+                <span class="material-icons-outlined" style="font-size: 48px;">cloud_done</span>
+                <h2>Masuk ke Akun</h2>
+                <p>Silakan masuk untuk mengakses layanan.</p>
+            </div>
+
+            <div class="login-form">
+                <button class="google-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                        alt="Google Logo" class="google-icon">
+                    Lanjutkan dengan Google
+                </button>
+
+                <div class="divider"><span>ATAU</span></div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="nama@email.com" id="email-input">
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" id="password-input">
+                </div>
+
+                <button class="primary-btn" id="login-submit-btn" style="width: 100%; margin-top: 10px;">Masuk
+                    Aplikasi</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= APP DASHBOARD ================= -->
+    <div id="dashboard-app" class="view">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="material-icons-outlined text-primary" style="font-size: 32px;">cloud_done</span>
+                <span class="logo-text">SmartNesia</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-target="home-view">
+                    <span class="material-icons-outlined">home</span>
+                    <span>Beranda Utama</span>
+                </a>
+                <a href="#" class="nav-item" data-target="layanan-view">
+                    <span class="material-icons-outlined">account_balance</span>
+                    <span>Layanan Publik</span>
+                </a>
+                <a href="#" class="nav-item" data-target="wisata-view">
+                    <span class="material-icons-outlined">landscape</span>
+                    <span>Wisata & Event</span>
+                </a>
+                <a href="#" class="nav-item" data-target="chatbot-view">
+                    <span class="material-icons-outlined">smart_toy</span>
+                    <span>Asisten AI</span>
+                </a>
+                <a href="#" class="nav-item" data-target="history-view">
+                    <span class="material-icons-outlined">history</span>
+                    <span>Riwayat Transaksi</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <span class="material-icons-outlined">person</span>
+                    </div>
+                    <div class="user-info">
+                        <strong>Pengguna</strong>
+                        <small>user@example.com</small>
+                    </div>
+                </div>
+                <button id="logout-btn" class="logout-btn">
+                    <span class="material-icons-outlined">logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Topbar (Visible mainly on mobile) -->
+            <header class="topbar">
+                <button id="mobile-menu-btn" class="icon-btn">
+                    <span class="material-icons-outlined">menu</span>
+                </button>
+                <h2>SmartNesia Dashboard</h2>
+                <div class="user-avatar">
+                    <span class="material-icons-outlined">person</span>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+
+                <!-- HOME VIEW -->
+                <section id="home-view" class="app-section active">
+                    <!-- Dashboard Header Profil -->
+                    <div class="home-profile-header">
+                        <div class="home-avatar">
+                            <span class="material-icons-outlined">person</span>
+                        </div>
+                        <div class="home-greeting">
+                            <small>SELAMAT PAGI</small>
+                            <h2>Halo, Budi 👋</h2>
+                        </div>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="home-search-bar">
+                        <span class="material-icons-outlined search-icon">search</span>
+                        <input type="text" placeholder="Cari layanan publik atau destinasi...">
+                    </div>
+
+                    <!-- Quick Links Grid -->
+                    <div class="home-quick-links">
+                        <div class="quick-link-item"
+                            onclick="document.querySelector('[data-target=\'layanan-view\']').click()">
+                            <div class="ql-icon" style="background-color: #e8f5e9; color: #4CAF50;">
+                                <span class="material-icons-outlined">business</span>
+                            </div>
+                            <span>Layanan Publik</span>
+                        </div>
+                        <div class="quick-link-item"
+                            onclick="document.querySelector('[data-target=\'wisata-view\']').click()">
+                            <div class="ql-icon" style="background-color: #f3e5f5; color: #9C27B0;">
+                                <span class="material-icons-outlined">landscape</span>
+                            </div>
+                            <span>Wisata</span>
+                        </div>
+                        <div class="quick-link-item"
+                            onclick="document.querySelector('[data-target=\'wisata-view\']').click()">
+                            <div class="ql-icon" style="background-color: #fff3e0; color: #FF9800;">
+                                <span class="material-icons-outlined">confirmation_number</span>
+                            </div>
+                            <span>Tiket</span>
+                        </div>
+                        <div class="quick-link-item"
+                            onclick="document.querySelector('[data-target=\'wisata-view\']').click()">
+                            <div class="ql-icon" style="background-color: #e0f7fa; color: #00BCD4;">
+                                <span class="material-icons-outlined">event</span>
+                            </div>
+                            <span>Event</span>
+                        </div>
+                        <div class="quick-link-item">
+                            <div class="ql-icon" style="background-color: #f5f5f5; color: #9e9e9e;">
+                                <span class="material-icons-outlined">more_horiz</span>
+                            </div>
+                            <span>Lainnya</span>
+                        </div>
+                    </div>
+
+                    <!-- Info Banner -->
+                    <div class="home-info-banner">
+                        <span class="badge-info">INFO PEMERINTAH</span>
+                        <h3>Vaksinasi Booster Ke-2 Kini Tersedia di Puskesmas Terdekat</h3>
+                        <p>Daftar sekarang melalui aplikasi SmartNesia</p>
+                        <div class="banner-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <!-- Rekomendasi Section -->
+                    <div class="home-recommendation-header">
+                        <div>
+                            <h3>Rekomendasi untuk Kamu</h3>
+                            <p>Berdasarkan minat dan aktivitasmu</p>
+                        </div>
+                        <a href="#" onclick="document.querySelector('[data-target=\'wisata-view\']').click()">LIHAT
+                            SEMUA</a>
+                    </div>
+
+                    <div class="home-recommendation-scroll">
+                        <div class="rec-card" onclick="document.querySelector('[data-target=\'wisata-view\']').click()">
+                            <div class="rec-img"
+                                style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3)), url('sunrise borobudur.webp') center/cover;">
+                                <span class="rec-badge">DESTINASI</span>
+                            </div>
+                            <div class="rec-content">
+                                <h4>Sunrise di Borobudur</h4>
+                                <p><span class="material-icons-outlined">place</span> Magelang, Jawa Tengah</p>
+                                <div class="rec-price-row">
+                                    <span class="price">Rp 50.000</span>
+                                    <span class="material-icons-outlined star">star</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rec-card" onclick="document.querySelector('[data-target=\'wisata-view\']').click()">
+                            <div class="rec-img"
+                                style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3)), url('sawah ubud.jpg') center/cover;">
+                                <span class="rec-badge">KEGIATAN</span>
+                            </div>
+                            <div class="rec-content">
+                                <h4>Trekking Sawah Ubud</h4>
+                                <p><span class="material-icons-outlined">place</span> Ubud, Bali</p>
+                                <div class="rec-price-row">
+                                    <span class="price text-primary">Gratis</span>
+                                    <span class="material-icons-outlined star">star</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LAYANAN PUBLIK VIEW -->
+                <section id="layanan-view" class="app-section">
+                    <div class="section-header-app">
+                        <h1>Layanan Publik Terpadu</h1>
+                        <p>Pilih layanan yang Anda butuhkan tanpa perlu antre.</p>
+                    </div>
+
+                    <div class="layanan-grid">
+                        <!-- KTP Digital (IKD) -->
+                        <div class="layanan-card" onclick="startProcedure('ktp')">
+                            <span class="material-icons-outlined text-primary" style="font-size: 40px;">badge</span>
+                            <h3>KTP Digital (IKD)</h3>
+                            <p>Aktivasi Identitas Kependudukan Digital melalui ponsel.</p>
+                            <button class="secondary-btn btn-small">Mulai Layanan</button>
+                        </div>
+
+                        <!-- Kartu Keluarga -->
+                        <div class="layanan-card" onclick="startProcedure('kk')">
+                            <span class="material-icons-outlined"
+                                style="font-size: 40px; color: #9C27B0;">family_restroom</span>
+                            <h3>Kartu Keluarga</h3>
+                            <p>Pembaruan atau pengajuan perubahan data KK.</p>
+                            <button class="secondary-btn btn-small">Mulai Layanan</button>
+                        </div>
+
+                        <!-- Izin Usaha (NIB) -->
+                        <div class="layanan-card" onclick="startProcedure('nib')">
+                            <span class="material-icons-outlined" style="font-size: 40px; color: #4CAF50;">store</span>
+                            <h3>Izin Usaha (NIB)</h3>
+                            <p>Pendaftaran Nomor Induk Berusaha.</p>
+                            <button class="secondary-btn btn-small">Mulai Layanan</button>
+                        </div>
+
+                        <!-- Sertifikasi Halal -->
+                        <div class="layanan-card" onclick="startProcedure('halal')">
+                            <span class="material-icons-outlined"
+                                style="font-size: 40px; color: #00BCD4;">verified</span>
+                            <h3>Sertifikasi Halal</h3>
+                            <p>Pengajuan sertifikasi halal melalui self-declare.</p>
+                            <button class="secondary-btn btn-small">Mulai Layanan</button>
+                        </div>
+
+                        <!-- Pajak PBB -->
+                        <div class="layanan-card" onclick="startProcedure('pbb')">
+                            <span class="material-icons-outlined"
+                                style="font-size: 40px; color: #FF9800;">home_work</span>
+                            <h3>Pajak PBB</h3>
+                            <p>Cek dan bayar Pajak Bumi dan Bangunan.</p>
+                            <button class="secondary-btn btn-small">Mulai Layanan</button>
+                        </div>
+
+                        <!-- E-Samsat -->
+                        <div class="layanan-card" onclick="startProcedure('samsat')">
+                            <span class="material-icons-outlined"
+                                style="font-size: 40px; color: #d32f2f;">directions_car</span>
+                            <h3>E-Samsat</h3>
+                            <p>Pembayaran pajak kendaraan bermotor online.</p>
+                            <button class="secondary-btn btn-small">Mulai Layanan</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WISATA VIEW -->
+                <section id="wisata-view" class="app-section">
+                    <div class="section-header-app">
+                        <h1>Wisata & Event Indonesia</h1>
+                        <p>Pesan tiket destinasi unggulan dengan mudah.</p>
+                    </div>
+
+                    <div class="wisata-filters">
+                        <button class="filter-btn active">Semua</button>
+                        <button class="filter-btn">Taman Nasional</button>
+                        <button class="filter-btn">Candi & Sejarah</button>
+                        <button class="filter-btn">Event Konser</button>
+                    </div>
+
+                    <div class="wisata-grid" id="wisata-container">
+                        <!-- Disuntikkan via JS -->
+                    </div>
+                </section>
+
+                <!-- DETAIL WISATA VIEW -->
+                <section id="detail-wisata-view" class="app-section" style="padding: 0; position: relative;">
+                    <div class="detail-header-img" id="detail-img">
+                        <div class="detail-nav">
+                            <button class="icon-btn back-circle" onclick="switchAppView('wisata-view')">
+                                <span class="material-icons-outlined">arrow_back_ios_new</span>
+                            </button>
+                            <button class="icon-btn back-circle">
+                                <span class="material-icons-outlined">share</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="detail-content-wrapper">
+                        <div class="detail-main-info">
+                            <h2 id="detail-title">Nama Destinasi</h2>
+                            <p class="detail-location"><span class="material-icons-outlined">place</span> <span
+                                    id="detail-location-text">Lokasi Destinasi</span></p>
+
+                            <div class="detail-rating-row">
+                                <span class="material-icons-outlined" style="color: #FFC107;">star</span>
+                                <strong id="detail-rating">4.8</strong>
+                                <span style="color: var(--text-muted); font-size: 13px;">(<span
+                                        id="detail-reviews">1.200</span> review)</span>
+                                <span class="material-icons-outlined"
+                                    style="color: var(--text-muted); font-size: 16px; margin-left: 4px;">chevron_right</span>
+                            </div>
+
+                            <div class="preferred-badge">
+                                <span class="material-icons-outlined">verified_user</span> Preferred Partner
+                            </div>
+                        </div>
+
+                        <hr class="detail-divider">
+
+                        <div class="detail-section">
+                            <h3>Fasilitas</h3>
+                            <div class="detail-facilities" id="detail-facilities">
+                                <!-- JS Injected -->
+                            </div>
+                        </div>
+
+                        <hr class="detail-divider">
+
+                        <div class="detail-section">
+                            <h3>Lokasi Peta</h3>
+                            <div class="detail-map">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/OpenStreetMap_default_map_example.png/800px-OpenStreetMap_default_map_example.png"
+                                    alt="Map">
+                                <button class="secondary-btn btn-small"
+                                    style="position: absolute; bottom: 10px; right: 10px; background: white; border: none; box-shadow: var(--shadow-md);">Buka
+                                    Peta</button>
+                            </div>
+                        </div>
+
+                        <hr class="detail-divider">
+
+                        <div class="detail-section">
+                            <h3>Review Pengunjung</h3>
+                            <div class="review-grid" id="detail-review-grid">
+                                <!-- JS Injected -->
+                            </div>
+                            <button class="secondary-btn" style="width: 100%; margin-top: 16px;">Lihat Semua
+                                Review</button>
+                        </div>
+
+                        <div style="height: 100px;"></div> <!-- Spacer for fixed footer -->
+                    </div>
+
+                    <div class="detail-bottom-bar">
+                        <div class="price-col">
+                            <small>Mulai dari</small>
+                            <h3 id="detail-price-text">Rp 0</h3>
+                        </div>
+                        <button class="primary-btn" id="btn-pesan-sekarang">Pesan Sekarang</button>
+                    </div>
+                </section>
+
+                <!-- HISTORY VIEW -->
+                <section id="history-view" class="app-section">
+                    <div class="section-header-app" style="display: flex; align-items: center; gap: 16px;">
+                        <button class="back-btn icon-btn" onclick="switchAppView('wisata-view')"
+                            style="background: transparent; border: none; cursor: pointer;">
+                            <span class="material-icons-outlined">arrow_back_ios</span>
+                        </button>
+                        <div>
+                            <h1 style="margin-bottom: 0;">Riwayat Pesanan</h1>
+                            <p>Pantau tiket dan pembayaran Anda.</p>
+                        </div>
+                    </div>
+
+                    <div class="history-tabs">
+                        <button class="history-tab active" data-tab="belum-bayar">Belum Bayar</button>
+                        <button class="history-tab" data-tab="selesai">Selesai</button>
+                    </div>
+
+                    <div class="history-container" id="history-container">
+                        <!-- History items injected via JS -->
+                    </div>
+                </section>
+
+                <!-- CHATBOT VIEW -->
+                <section id="chatbot-view" class="app-section">
+                    <div class="chat-wrapper">
+                        <div class="chat-header">
+                            <span class="material-icons-outlined text-primary">smart_toy</span>
+                            <div>
+                                <h2>SmartNesia AI</h2>
+                                <p>Selalu online untuk membantu Anda</p>
+                            </div>
+                        </div>
+                        <div class="chat-messages-container" id="chat-messages-container">
+                            <div class="message bot">
+                                <div class="avatar"><span class="material-icons-outlined">smart_toy</span></div>
+                                <div class="bubble">Halo! Saya asisten AI SmartNesia. Ada yang bisa saya bantu terkait
+                                    layanan kependudukan atau rekomendasi wisata hari ini?</div>
+                            </div>
+                        </div>
+                        <div class="chat-input-wrapper">
+                            <input type="text" id="chat-input-app" placeholder="Tanyakan sesuatu...">
+                            <button id="send-btn-app"><span class="material-icons-outlined">send</span></button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PEMBAYARAN VIEW -->
+                <section id="pembayaran-view" class="app-section">
+                    <div class="payment-header">
+                        <button class="back-btn icon-btn"
+                            onclick="document.querySelector('[data-target=\'wisata-view\']').click()">
+                            <span class="material-icons-outlined">arrow_back_ios</span>
+                        </button>
+                        <h2>Pembayaran</h2>
+                    </div>
+
+                    <div class="payment-content">
+                        <div class="payment-info">
+                            <h3>Metode Pembayaran</h3>
+                            <p>Yuk pilih cara bayar yang kamu mau!</p>
+                        </div>
+
+                        <div class="payment-methods">
+                            <!-- E-Wallet -->
+                            <div class="method-category">
+                                <h4>E-Wallet</h4>
+                                <div class="method-list">
+                                    <label class="method-item">
+                                        <div class="method-left">
+                                            <div class="method-icon" style="background-color: #00a5cf; color: white;">
+                                                <span class="material-icons-outlined">account_balance_wallet</span>
+                                            </div>
+                                            <span>Gopay</span>
+                                        </div>
+                                        <input type="radio" name="payment_method" value="Gopay">
+                                    </label>
+                                    <label class="method-item">
+                                        <div class="method-left">
+                                            <div class="method-icon" style="background-color: #ee4d2d; color: white;">
+                                                <span class="material-icons-outlined">shopping_bag</span>
+                                            </div>
+                                            <span>Shopeepay</span>
+                                        </div>
+                                        <input type="radio" name="payment_method" value="Shopeepay">
+                                    </label>
+                                    <label class="method-item">
+                                        <div class="method-left">
+                                            <div class="method-icon" style="background-color: #118ee0; color: white;">
+                                                <span class="material-icons-outlined">account_balance_wallet</span>
+                                            </div>
+                                            <span>Dana</span>
+                                        </div>
+                                        <input type="radio" name="payment_method" value="Dana">
+                                    </label>
+                                    <label class="method-item">
+                                        <div class="method-left">
+                                            <div class="method-icon" style="background-color: #4c3494; color: white;">
+                                                <span class="material-icons-outlined">account_balance_wallet</span>
+                                            </div>
+                                            <span>Ovo</span>
+                                        </div>
+                                        <input type="radio" name="payment_method" value="Ovo">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- QRIS -->
+                            <div class="method-category">
+                                <h4>QRIS</h4>
+                                <div class="method-list">
+                                    <label class="method-item">
+                                        <div class="method-left">
+                                            <div class="method-icon" style="background-color: #ed2c25; color: white;">
+                                                <span class="material-icons-outlined">qr_code_2</span>
+                                            </div>
+                                            <span>QRIS</span>
+                                        </div>
+                                        <input type="radio" name="payment_method" value="QRIS" checked>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Virtual Account -->
+                            <div class="method-category">
+                                <h4>Virtual Account</h4>
+                                <div class="method-list">
+                                    <label class="method-item">
+                                        <div class="method-left">
+                                            <div class="method-icon" style="background-color: #0066AE; color: white;">
+                                                <span class="material-icons-outlined">account_balance</span>
+                                            </div>
+                                            <span>BCA Virtual Account</span>
+                                        </div>
+                                        <input type="radio" name="payment_method" value="BCA Virtual Account">
+                                    </label>
+                                    <label class="method-item">
+                                        <div class="method-left">
+                                            <div class="method-icon" style="background-color: #003D79; color: white;">
+                                                <span class="material-icons-outlined">account_balance</span>
+                                            </div>
+                                            <span>Mandiri Virtual Account</span>
+                                        </div>
+                                        <input type="radio" name="payment_method" value="Mandiri Virtual Account">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-footer">
+                        <div class="total-info">
+                            <small>Total Pembayaran</small>
+                            <strong id="pembayaran-total-price">Rp 0</strong>
+                        </div>
+                        <button class="primary-btn" id="btn-bayar-sekarang">Bayar</button>
+                    </div>
+                </section>
+
+                <!-- MENUNGGU PEMBAYARAN VIEW -->
+                <section id="menunggu-pembayaran-view" class="app-section">
+                    <div class="waiting-header">
+                        <div class="waiting-icon">
+                            <span class="material-icons-outlined">schedule</span>
+                        </div>
+                        <p>Pesanan Berhasil Dibuat</p>
+                        <h2 id="menunggu-total-price">Rp 0</h2>
+                    </div>
+
+                    <div class="waiting-content">
+                        <div class="timer-box">
+                            <span class="material-icons-outlined text-danger">error_outline</span>
+                            <div>
+                                <small>Selesaikan pembayaran sebelum</small>
+                                <strong id="payment-deadline-time">05 April 2026 17:31</strong>
+                            </div>
+                        </div>
+
+                        <div class="instruction-card">
+                            <div class="instruction-details">
+                                <div class="detail-row">
+                                    <span>ID Pembayaran</span>
+                                    <strong id="waiting-payment-id">RT - PAY000001</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>ID Pesanan</span>
+                                    <strong id="waiting-order-id">KITA - RT000001</strong>
+                                </div>
+                            </div>
+
+                            <div class="qr-container" id="instruction-qr">
+                                <!-- QR Code or VA Code goes here via JS -->
+                            </div>
+
+                            <button class="refresh-btn" id="btn-refresh-status">
+                                <span class="material-icons-outlined">refresh</span> Refresh Status
+                            </button>
+                        </div>
+
+                        <div class="waiting-actions">
+                            <button class="secondary-btn btn-large"
+                                onclick="document.querySelector('[data-target=\'home-view\']').click()">Kembali ke
+                                Beranda</button>
+                            <button class="primary-btn btn-large" onclick="switchAppView('pembayaran-view')">Ganti
+                                Metode Pembayaran</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SELESAI PEMBAYARAN VIEW -->
+                <section id="selesai-pembayaran-view" class="app-section">
+                    <div class="success-header">
+                        <div class="success-icon">
+                            <span class="material-icons-outlined">verified</span>
+                        </div>
+                        <p>Yeay! Pembayaran berhasil</p>
+                        <h2 id="selesai-total-price">Rp 0</h2>
+                    </div>
+
+                    <div class="success-content">
+                        <div class="success-banner">
+                            <span class="material-icons-outlined">campaign</span>
+                            <p>Hai Pengguna, Pembayaranmu sudah berhasil.</p>
+                        </div>
+
+                        <div class="transaction-details">
+                            <h3>Detail Transaksi</h3>
+                            <div class="detail-row">
+                                <span>ID Pesanan</span>
+                                <strong id="success-order-id">KITA - RT000001</strong>
+                            </div>
+                            <div class="detail-row">
+                                <span>Tanggal Pembayaran</span>
+                                <strong id="success-date">05/04/2026</strong>
+                            </div>
+                            <div class="detail-row">
+                                <span>Metode Pembayaran</span>
+                                <strong id="success-payment-method">Qris</strong>
+                            </div>
+                            <hr>
+                            <div class="detail-row total-row">
+                                <span>Jumlah Pembayaran</span>
+                                <strong id="success-total-paid">Rp 0</strong>
+                            </div>
+                        </div>
+
+                        <div class="success-actions">
+                            <button class="secondary-btn btn-large"
+                                onclick="document.querySelector('[data-target=\'home-view\']').click()">Kembali ke
+                                Beranda</button>
+                            <button class="primary-btn btn-large"
+                                onclick="document.querySelector('[data-target=\'wisata-view\']').click()">Cek Status
+                                Pembayaran</button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <!-- Floating Action Button for AI Bot -->
+            <button class="fab-chatbot" onclick="document.querySelector('[data-target=\'chatbot-view\']').click()">
+                <span class="material-icons-outlined">smart_toy</span>
+            </button>
+        </main>
+    </div>
+
+    <!-- ================= BARCODE MODAL ================= -->
+    <div id="barcode-modal" class="modal">
+        <div class="modal-content alert-box">
+            <button class="close-btn"
+                onclick="document.getElementById('barcode-modal').classList.remove('active')">&times;</button>
+            <h2 style="margin-bottom: 20px;">Redeem Tiket</h2>
+            <p style="color: var(--text-muted); font-size: 14px;">Tunjukkan barcode ini kepada petugas di pintu masuk.
+            </p>
+            <div
+                style="margin: 20px auto; padding: 20px; background: white; display: inline-block; border-radius: 12px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"
+                    alt="Ticket Barcode" style="width: 200px;">
+            </div>
+            <p id="barcode-order-id" style="font-weight: bold; font-size: 18px; letter-spacing: 2px;"></p>
+        </div>
+    </div>
+
+    <!-- ================= NOTIFICATION / ALERT MODAL ================= -->
+    <div id="alert-modal" class="modal">
+        <div class="modal-content alert-box">
+            <div class="alert-icon" id="alert-icon">
+                <span class="material-icons-outlined text-primary">check_circle</span>
+            </div>
+            <h2 id="alert-title">Sukses</h2>
+            <p id="alert-message">Operasi berhasil dilakukan.</p>
+            <button class="primary-btn" id="close-alert-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- ================= MULTI-STEP PROCEDURE MODAL ================= -->
+    <div id="procedure-modal" class="modal">
+        <div class="modal-content form-box" style="max-width: 500px;">
+            <button class="close-btn" id="close-procedure">&times;</button>
+            <h2 id="procedure-title">Judul Layanan</h2>
+            <p id="procedure-goal" style="color: var(--text-muted); margin-bottom: 20px;">Tujuan Layanan</p>
+
+            <!-- Step Indicator -->
+            <div class="step-indicator" id="step-indicator">
+                <!-- Dots akan digenerate via JS -->
+            </div>
+
+            <!-- Dynamic Content Area -->
+            <div class="procedure-body" id="procedure-body">
+                <!-- Konten step akan dirender di sini -->
+            </div>
+
+            <!-- Footer Buttons -->
+            <div class="procedure-footer" id="procedure-footer" style="margin-top: 24px; display: flex; gap: 10px;">
+                <!-- Tombol dinamis -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
